@@ -12,6 +12,7 @@ var (
 		"abcdefghjkmnpqrstuwxyz0123456789").WithPadding(base32.NoPadding)
 )
 
+// Random returns a random, base32-encoded 192-bit string.
 func Random() string {
 	bytes := make([]byte, 24)
 	_, err := rand.Read(bytes)
@@ -21,6 +22,7 @@ func Random() string {
 	return encoding.EncodeToString(bytes)
 }
 
+// Hash returns a base32-encoded 192-bit hash of input.
 func Hash(input []byte) string {
 	xoodyak := xoodyak.New()
 	xoodyak.Absorb(input)
@@ -28,6 +30,7 @@ func Hash(input []byte) string {
 	return encoding.EncodeToString(digest)
 }
 
+// HashString returns a base32-encoded 192-bit hash of input.
 func HashString(input string) string {
 	return Hash([]byte(input))
 }
