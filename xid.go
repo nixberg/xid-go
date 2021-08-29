@@ -9,7 +9,7 @@ import (
 
 var (
 	encoding = base32.NewEncoding(
-		"abcdefghjkmnpqrstuwxyz0123456789").WithPadding(base32.NoPadding)
+		"0123456789abcdefghjkmnpqrstuwxyz").WithPadding(base32.NoPadding)
 )
 
 // Random returns a random, base32-encoded 192-bit string.

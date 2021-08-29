@@ -1,6 +1,8 @@
 package xid
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestRandom(t *testing.T) {
 	if len(Random()) != 39 {
@@ -9,7 +11,7 @@ func TestRandom(t *testing.T) {
 }
 
 func TestHashString(t *testing.T) {
-	if HashString("hi") != "2kase65xtnxgrm4tpd8t1dscae098y1x91bc66a" {
+	if HashString("hi") != "r90f4wukgbk6eatgc3ygq3f204pzymqkzq12ww0" {
 		t.Error("HashString")
 	}
 }
