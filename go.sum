@@ -1,2 +1,4 @@
+github.com/nixberg/chacha-rng-go v0.1.0 h1:2Y90hS8H/O+82yLWKD4MldkJM7Pzhezc7rT6EILvDNo=
+github.com/nixberg/chacha-rng-go v0.1.0/go.mod h1:iPf1i6Vcwgoue86dblORobEXNCd1PFQiysFiImawfCM=
 github.com/nixberg/xoodyak-go v0.1.0 h1:wPZ9unVR1O07XqytY+NIo+x131T0AhDAdx56EA3CntY=
 github.com/nixberg/xoodyak-go v0.1.0/go.mod h1:bnUOMFZzV+NtxBlEvmn+2IMVWm3cFVUrW46DPh0aQEU=
