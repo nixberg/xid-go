@@ -13,10 +13,11 @@ const (
 
 var (
 	encoding = base32.NewEncoding(
-		"0123456789abcdefghjkmnpqrstuwxyz").WithPadding(base32.NoPadding)
+		"0123456789abcdefghjkmnpqrstuwxyz",
+	).WithPadding(base32.NoPadding)
 )
 
-func idValid(xid string, id byte) bool {
+func isValidXID(xid string, id byte) bool {
 	if len(xid) != 39 {
 		return false
 	}

@@ -8,7 +8,7 @@ import (
 )
 
 func TestHash(t *testing.T) {
-	xid := HashString("")
+	xid := HashStrings("")
 
 	if xid != "x8ajyat7qkh4xyu6rhwx9bfhff9j9p06x1fzeqg" {
 		t.Error("Hash: wrong value")
@@ -45,25 +45,25 @@ func TestRandom(t *testing.T) {
 }
 
 func TestTimeAndHash(t *testing.T) {
-	if TimeAndHashString(time.Unix(-9223372036, -854775808), "") !=
+	if TimeAndHashStrings(time.Unix(-9223372036, -854775808), "") !=
 		"0000000000001tgn5wnmff729uxpdh3stjpz2yt" {
 		t.Error("TimeAndHash: wrong value")
 	}
-	if TimeAndHashString(time.Unix(0, 0), "") !=
+	if TimeAndHashStrings(time.Unix(0, 0), "") !=
 		"g000000000001tgn5wnmff729uxpdh3stjpz2yt" {
 		t.Error("TimeAndHash: wrong value")
 	}
-	if TimeAndHashString(time.Unix(+9223372036, +854775807), "") !=
+	if TimeAndHashStrings(time.Unix(+9223372036, +854775807), "") !=
 		"zzzzzzzzzzzzztgn5wnmff729uxpdh3stjpz2yt" {
 		t.Error("TimeAndHash: wrong value")
 	}
 
-	if !IsValidTimeAndHash(TimeAndHashString(time.Now(), "")) {
+	if !IsValidTimeAndHash(TimeAndHashStrings(time.Now(), "")) {
 		t.Error("TimeAndHash: not valid")
 	}
-	if IsValidRandom(TimeAndHashString(time.Now(), "")) ||
-		IsValidHash(TimeAndHashString(time.Now(), "")) ||
-		IsValidTimeAndRandom(TimeAndHashString(time.Now(), "")) {
+	if IsValidRandom(TimeAndHashStrings(time.Now(), "")) ||
+		IsValidHash(TimeAndHashStrings(time.Now(), "")) ||
+		IsValidTimeAndRandom(TimeAndHashStrings(time.Now(), "")) {
 		t.Error("TimeAndHash: not invalid ")
 	}
 }

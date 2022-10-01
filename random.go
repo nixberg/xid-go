@@ -22,5 +22,5 @@ func random(rng *chacha.ChaCha) string {
 }
 
 func IsValidRandom(xid string) bool {
-	return idValid(xid, idRandom)
+	return isValidXID(xid, idRandom)
 }

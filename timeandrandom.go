@@ -31,5 +31,5 @@ func timeAndRandom(time time.Time, rng *chacha.ChaCha) string {
 }
 
 func IsValidTimeAndRandom(xid string) bool {
-	return idValid(xid, idTimeAndRandom)
+	return isValidXID(xid, idTimeAndRandom)
 }
